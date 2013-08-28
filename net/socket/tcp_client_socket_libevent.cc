@@ -555,7 +555,7 @@ void TCPClientSocketLibevent::LogConnectCompletion(int net_error) {
   union {
     struct sockaddr_storage source_address;
     struct sockaddr source_address_generic;
-  }
+  };
   socklen_t addrlen = sizeof(source_address);
   int rv = getsockname(socket_, &source_address_generic), &addrlen);
   if (rv != 0) {
